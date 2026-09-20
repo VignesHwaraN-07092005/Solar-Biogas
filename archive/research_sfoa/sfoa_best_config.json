@@ -1,0 +1,49 @@
+{
+  "model_name": "SFOA-Optimized Research XCO-Net",
+  "research_status": "COMPLETED_RESEARCH_EXPERIMENT",
+  "evaluated_at": "2026-09-19T10:36:35Z",
+  "seed": 42,
+  "feature_set": "Set_A_Full_9Ch",
+  "feature_columns": [
+    "biogas_today_nm3",
+    "total_incoming_mt",
+    "total_processed_mt",
+    "feed_total_m3",
+    "temp_outlet_d1_c",
+    "ph_outlet_d1",
+    "recycle_water_m3",
+    "feed_total_m3_was_missing",
+    "ph_outlet_d1_was_missing"
+  ],
+  "input_dim": 9,
+  "best_hyperparameters": {
+    "lookback": 14,
+    "conv_channels": 32,
+    "kernel_size": 5,
+    "gru_hidden_dim": 16,
+    "gru_layers": 1,
+    "attention_dim": 16,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 16
+  },
+  "parameter_count": 9634,
+  "training_time_seconds": 1.72,
+  "total_sfoa_evaluations": 40,
+  "total_search_time_seconds": 127.06,
+  "validation_metrics": {
+    "val_rmse": 1278.99,
+    "val_mae": 1021.71,
+    "val_mape": 12.97,
+    "val_r2": 0.5029
+  },
+  "baseline_comparison": {
+    "existing_xconet_val_rmse": 1294.67,
+    "sfoa_xconet_val_rmse": 1278.99,
+    "delta_val_rmse_vs_existing_xconet": -15.68,
+    "existing_gru_14d_val_rmse": 1302.94,
+    "delta_val_rmse_vs_gru_14d": -23.95
+  },
+  "test_set_isolation_confirmation": "CONFIRMED: test.csv (2026-03-10 to 2026-04-02) was NEVER accessed, loaded, or evaluated."
+}

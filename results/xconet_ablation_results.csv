@@ -1,0 +1,6 @@
+ablation_id,description,use_temporal_branch,use_cross_channel,use_physics_penalty,sfoa_optimized,param_count,val_mae,val_rmse,val_r2,test_mae,test_rmse,test_mape_pct,test_r2
+A,Persistence Anchor Only (y_t),False,False,False,False,0,1065.36,1336.81,0.4569,798.83,1000.9,11.15,0.183
+B,Temporal Branch (GRU) without Cross-Channel,True,False,False,False,4305,948.73,1233.76,0.5374,971.03,1296.46,14.27,-0.3707
+C,Temporal + Cross-Channel Mixing (No Physics Loss),True,True,False,False,5578,1131.31,1422.24,0.3853,1167.06,1322.91,15.69,-0.4272
+D,XCO-Net with Physics-Guided Penalty (Hand-Tuned),True,True,True,False,5578,1131.31,1422.24,0.3853,1167.06,1322.91,15.69,-0.4272
+E,"XCO-Net + SFOA Optimized (L=7, d_h=16, gamma=0.0065)",True,True,True,True,2706,1017.04,1283.47,0.4994,799.44,1016.92,11.23,0.1567

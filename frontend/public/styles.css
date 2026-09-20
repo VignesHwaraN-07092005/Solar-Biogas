@@ -1,0 +1,301 @@
+/* Modern Glassmorphic Dashboard Stylesheet for Smart Solar-Biogas Platform */
+:root {
+  --bg-dark: #0B1120;
+  --glass-bg: rgba(15, 23, 42, 0.75);
+  --glass-card: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --color-primary: #10B981;
+  --color-secondary: #2563EB;
+  --color-accent: #F59E0B;
+}
+
+/* Animated Gradient Mesh Background */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0B1120;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.10) 0px, transparent 50%);
+  background-attachment: fixed;
+  background-size: 200% 200%;
+  animation: bg-mesh-shift 22s ease infinite;
+  color: #F8FAFC;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#telemetry-source-select,
+#model-select {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@keyframes bg-mesh-shift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Custom Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.6);
+}
+
+/* Glassmorphism Classes */
+.glass-navbar {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: var(--glass-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.2), 0 0 25px rgba(37, 99, 235, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+/* Slide-In Glass AI Assistant Drawer */
+.glass-drawer {
+  background: rgba(11, 17, 32, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-left: 1px solid rgba(16, 185, 129, 0.4);
+  box-shadow: -15px 0 50px rgba(16, 185, 129, 0.15), -5px 0 30px rgba(37, 99, 235, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.05);
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hexagonal AI Button & Core Emblem Shapes */
+.hex-clip {
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+}
+
+.hex-rotate {
+  animation: hex-spin 8s linear infinite;
+}
+
+.rotate-6s {
+  animation: hex-spin 6s linear infinite;
+}
+
+@keyframes hex-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hex-breathe {
+  animation: hex-glow-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes hex-glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.7)) drop-shadow(0 0 16px rgba(37, 99, 235, 0.5));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(16, 185, 129, 0.95)) drop-shadow(0 0 28px rgba(37, 99, 235, 0.8));
+    transform: scale(1.05);
+  }
+}
+
+/* Typing Indicator Bounce Animation */
+@keyframes typing-dot-bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1.2); opacity: 1; }
+}
+
+.typing-dot {
+  animation: typing-dot-bounce 1.4s infinite ease-in-out both;
+}
+.typing-dot:nth-child(1) { animation-delay: 0s; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* Status Badges */
+.badge-pulse {
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+}
+
+/* Glow Utilities */
+.glow-emerald {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.6);
+}
+
+.glow-blue {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.6);
+}
+
+.glow-amber {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.6);
+}
+
+/* Tablet header layout optimization: keeps badge indicators on a clean single line */
+@media (min-width: 768px) and (max-width: 1200px) {
+  header.glass-navbar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+    padding: 0.75rem 1.25rem !important;
+  }
+  header.glass-navbar > div:first-child {
+    justify-content: flex-start;
+  }
+  header.glass-navbar > div:last-child {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.5rem !important;
+  }
+}
+
+/* Mobile header & control banner layout optimization: compact, responsive, strictly <= 160px height */
+@media (max-width: 640px) {
+  header.glass-navbar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0.35rem 0.6rem !important;
+    gap: 0.3rem !important;
+  }
+  header.glass-navbar .brand-logo-container {
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+  }
+  header.glass-navbar .brand-logo-container > div {
+    font-size: 0.8rem !important;
+  }
+  header.glass-navbar h1 {
+    font-size: 0.88rem !important;
+    line-height: 1.2 !important;
+  }
+  header.glass-navbar .brand-tagline {
+    display: none !important;
+  }
+  header.glass-navbar .header-indicators-wrap {
+    width: 100% !important;
+    gap: 0.25rem !important;
+    justify-content: flex-start !important;
+  }
+  header.glass-navbar .header-badge {
+    padding: 0.18rem 0.38rem !important;
+    font-size: 9px !important;
+    border-radius: 0.4rem !important;
+  }
+  #dataset-banner {
+    padding: 0.45rem 0.6rem !important;
+    gap: 0.35rem !important;
+  }
+  #dataset-banner .banner-controls-wrap {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 0.3rem !important;
+  }
+  #dataset-banner .banner-selectors-row {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+  }
+  #dataset-banner label[for="telemetry-source-select"] {
+    padding: 0.12rem 0.35rem !important;
+    font-size: 9.5px !important;
+    border-radius: 0.35rem !important;
+    align-self: flex-start !important;
+  }
+  #dataset-banner select {
+    max-width: 100% !important;
+    width: 100% !important;
+    font-size: 10.5px !important;
+    padding: 0.3rem 0.45rem !important;
+    border-radius: 0.5rem !important;
+  }
+  #dataset-banner .banner-actions-row {
+    width: 100% !important;
+    gap: 0.2rem !important;
+  }
+  #dataset-banner .banner-actions-row button {
+    padding: 0.2rem 0.45rem !important;
+    font-size: 10px !important;
+    border-radius: 0.4rem !important;
+  }
+  #dataset-banner .banner-playback-wrap {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0.2rem !important;
+    padding-top: 0.25rem !important;
+    border-top: 1px solid rgba(51, 65, 85, 0.4) !important;
+  }
+  #dataset-banner .banner-playback-wrap button {
+    padding: 0.2rem 0.4rem !important;
+    font-size: 10px !important;
+    border-radius: 0.4rem !important;
+    white-space: nowrap !important;
+  }
+  #dataset-banner .banner-playback-wrap #row-index-display {
+    font-size: 10px !important;
+    padding: 0 0.15rem !important;
+    white-space: nowrap !important;
+  }
+}
+
+#correlation-matrix-body td,
+#correlation-matrix-body th {
+  font-size: 10.5px !important;
+  line-height: 1.2 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-pulse, .animate-ping, .animate-spin {
+    animation: none !important;
+  }
+}
+
+

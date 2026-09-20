@@ -1,0 +1,14 @@
+model,type,lookback_days,residual_head,model_artifact,val_mae,val_rmse,val_r2,test_mae,test_rmse,test_mape_pct,test_r2
+Persistence Anchor (y_t),Naive Benchmark,1,False,None,1065.36,1336.81,0.4569,798.83,1000.9,11.15,0.183
+LSTM (3-day Lookback Residual),PyTorch LSTM,3,True,models/lstm_lookback_3d_residual.pt,1079.75,1351.84,0.4446,799.41,990.91,11.12,0.1992
+LSTM (3-day Lookback),PyTorch LSTM,3,False,models/lstm_lookback_3d_direct.pt,1536.18,1978.16,-0.1892,2523.85,2710.78,34.08,-4.9926
+GRU (3-day Lookback Residual),PyTorch GRU,3,True,models/gru_lookback_3d_residual.pt,1049.53,1316.81,0.473,783.18,994.38,10.97,0.1936
+GRU (3-day Lookback),PyTorch GRU,3,False,models/gru_lookback_3d_direct.pt,1358.52,1683.66,0.1385,1511.92,1688.7,19.99,-1.3256
+LSTM (7-day Lookback Residual),PyTorch LSTM,7,True,models/lstm_lookback_7d_residual.pt,1086.37,1357.65,0.4398,815.2,995.69,11.31,0.1915
+LSTM (7-day Lookback),PyTorch LSTM,7,False,models/lstm_lookback_7d_direct.pt,2041.77,2280.67,-0.5807,916.4,1193.25,11.62,-0.1612
+GRU (7-day Lookback Residual),PyTorch GRU,7,True,models/gru_lookback_7d_residual.pt,1058.01,1324.11,0.4672,789.39,989.76,11.03,0.2011
+GRU (7-day Lookback),PyTorch GRU,7,False,models/gru_lookback_7d_direct.pt,1665.18,1918.92,-0.119,1262.09,1443.77,16.29,-0.6999
+LSTM (14-day Lookback Residual),PyTorch LSTM,14,True,models/lstm_lookback_14d_residual.pt,1086.83,1359.43,0.4384,814.59,996.36,11.31,0.1904
+LSTM (14-day Lookback),PyTorch LSTM,14,False,models/lstm_lookback_14d_direct.pt,2106.52,2340.57,-0.6649,834.28,1137.42,10.46,-0.055
+GRU (14-day Lookback Residual),PyTorch GRU,14,True,models/gru_lookback_14d_residual.pt,983.31,1302.94,0.4841,766.61,959.4,11.01,0.2494
+GRU (14-day Lookback),PyTorch GRU,14,False,models/gru_lookback_14d_direct.pt,1598.24,1844.14,-0.0335,772.94,1036.86,9.73,0.1233

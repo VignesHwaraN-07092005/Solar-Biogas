@@ -1,0 +1,26 @@
+group_id,feature_group,model,num_features,val_mae,val_rmse,val_r2,test_mae,test_rmse,test_mape_pct,test_r2
+A_naive,A: Persistence Heuristic (y_t),Naive Persistence,1,1065.36,1336.81,0.4569,798.83,1000.9,11.15,0.183
+A,A: Persistence-only (Lag-0),Ridge Regression,1,1625.56,1929.49,-0.1314,1029.22,1263.48,13.07,-0.3019
+A,A: Persistence-only (Lag-0),Random Forest,1,1838.19,2103.74,-0.345,1009.01,1331.28,12.75,-0.4453
+A,A: Persistence-only (Lag-0),Gradient Boosting,1,1832.87,2152.59,-0.4082,1081.37,1444.22,13.72,-0.701
+B,B: Historical Production Lags,Ridge Regression,8,1381.53,1715.17,0.106,922.53,1133.41,11.76,-0.0476
+B,B: Historical Production Lags,Random Forest,8,2264.04,2575.5,-1.0159,1383.36,1714.96,17.38,-1.3985
+B,B: Historical Production Lags,Gradient Boosting,8,2508.85,2830.28,-1.4344,1642.05,2029.42,20.67,-2.3587
+C,C: Feedstock Loading Dynamics,Ridge Regression,27,1797.69,2123.29,-0.3701,1314.05,1449.71,17.51,-0.7139
+C,C: Feedstock Loading Dynamics,Random Forest,27,2731.96,3024.86,-1.7806,1451.68,1815.36,18.34,-1.6875
+C,C: Feedstock Loading Dynamics,Gradient Boosting,27,2636.09,2928.7,-1.6067,1628.23,1933.74,21.01,-2.0495
+D,D: pH & Temperature Microclimate,Ridge Regression,12,3169.39,3390.41,-2.4933,1939.4,2253.41,24.57,-3.1411
+D,D: pH & Temperature Microclimate,Random Forest,12,3101.56,3406.57,-2.5267,2049.29,2406.09,25.96,-3.7212
+D,D: pH & Temperature Microclimate,Gradient Boosting,12,3501.3,3810.52,-3.4127,2562.86,2885.2,33.01,-5.7886
+E,E: Water & Slurry Balances,Ridge Regression,14,3138.39,3368.59,-2.4485,2857.74,3042.2,37.48,-6.5475
+E,E: Water & Slurry Balances,Random Forest,14,2959.68,3303.23,-2.316,2042.52,2311.19,26.18,-3.3561
+E,E: Water & Slurry Balances,Gradient Boosting,14,2960.06,3352.2,-2.415,1992.95,2275.54,25.62,-3.2228
+F,F: Calendar Cyclical Variables,Ridge Regression,4,2843.23,3076.71,-1.8768,1599.09,1946.39,19.98,-2.0895
+F,F: Calendar Cyclical Variables,Random Forest,4,2172.59,2437.3,-0.8053,1831.65,2265.31,23.17,-3.1849
+F,F: Calendar Cyclical Variables,Gradient Boosting,4,2335.54,2587.97,-1.0354,1803.99,2179.79,22.99,-2.8749
+G,G: Missingness Indicators,Ridge Regression,22,3215.17,3476.43,-2.6728,2222.97,2462.9,28.68,-3.9468
+G,G: Missingness Indicators,Random Forest,22,3160.06,3410.99,-2.5359,2075.34,2354.16,26.51,-3.5196
+G,G: Missingness Indicators,Gradient Boosting,22,3201.26,3461.86,-2.6421,2111.43,2384.95,27.01,-3.6386
+H,H: Full Multimodal Feature Set,Ridge Regression,63,1348.92,1628.68,0.1939,1764.04,1919.86,23.69,-2.0059
+H,H: Full Multimodal Feature Set,Random Forest,63,2098.88,2414.3,-0.7714,1186.48,1525.06,14.77,-0.8967
+H,H: Full Multimodal Feature Set,Gradient Boosting,63,2390.44,2742.43,-1.2856,1761.71,2007.24,22.69,-2.2857

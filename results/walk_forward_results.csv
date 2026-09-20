@@ -1,0 +1,13 @@
+window_id,window_name,test_date_start,test_date_end,model,test_mae,test_rmse,test_mape_pct,test_r2
+1,Mid-Winter Transition,2026-02-06,2026-02-25,Persistence (Lag-0),1368.95,1639.63,22.56,0.4344
+1,Mid-Winter Transition,2026-02-06,2026-02-25,Exponential Moving Average (EMA-0.9),1344.38,1616.87,22.25,0.45
+1,Mid-Winter Transition,2026-02-06,2026-02-25,Ridge (Tuned a=0.1),1832.6,2042.75,31.27,0.122
+1,Mid-Winter Transition,2026-02-06,2026-02-25,Random Forest (max_depth=4),2380.29,2837.09,33.11,-0.6935
+2,Late-Winter Ramp,2026-02-26,2026-03-18,Persistence (Lag-0),834.05,1118.04,9.65,-0.5416
+2,Late-Winter Ramp,2026-02-26,2026-03-18,Exponential Moving Average (EMA-0.9),795.9,1090.74,9.19,-0.4672
+2,Late-Winter Ramp,2026-02-26,2026-03-18,Ridge (Tuned a=10.0),837.82,1047.19,9.23,-0.3524
+2,Late-Winter Ramp,2026-02-26,2026-03-18,Random Forest (max_depth=4),2524.95,2679.3,27.77,-7.853
+3,Official Held-Out Spring Test,2026-03-10,2026-04-02,Persistence (Lag-0),798.83,1000.9,11.15,0.183
+3,Official Held-Out Spring Test,2026-03-10,2026-04-02,Exponential Moving Average (EMA-0.9),777.32,984.48,10.86,0.2096
+3,Official Held-Out Spring Test,2026-03-10,2026-04-02,Ridge (Tuned a=0.1),949.65,1143.02,12.17,-0.0655
+3,Official Held-Out Spring Test,2026-03-10,2026-04-02,Random Forest (max_depth=4),1354.46,1669.0,17.05,-1.2716

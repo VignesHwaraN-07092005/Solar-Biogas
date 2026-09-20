@@ -1,0 +1,4 @@
+window_id,window_name,test_range,test_n,test_mae,test_rmse,test_mape_pct,test_r2,actual_sample,pred_sample
+1,Mid-Winter Transition,2026-02-06 to 2026-02-25,20,1380.67,1607.07,22.41,0.4566,"[np.float32(9183.0), np.float32(5875.0), np.float32(7726.0)]","[np.float32(8317.1), np.float32(8806.4), np.float32(5231.7)]"
+2,Late-Winter Ramp,2026-02-26 to 2026-03-18,20,821.07,1126.39,9.52,-0.5647,"[np.float32(9871.0), np.float32(8406.0), np.float32(8558.0)]","[np.float32(10042.0), np.float32(9922.8), np.float32(8463.5)]"
+3,Official Held-Out Spring Test,2026-03-10 to 2026-04-02,24,799.44,1016.92,11.23,0.1567,"[np.float32(9649.0), np.float32(9623.0), np.float32(7061.0)]","[np.float32(9587.4), np.float32(9770.0), np.float32(9717.1)]"

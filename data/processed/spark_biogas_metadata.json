@@ -1,0 +1,182 @@
+{
+  "dataset_name": "Spark Bio Gas Operational CBG Plant Log",
+  "primary_source_file": "Master data Spark biogas.xlsx",
+  "primary_source_sha256": "4d45f2d469a3f2f4bbbb04f804ec57085d451101087e729a925617ad52e1d3b4",
+  "processed_file": "data/processed\\spark_biogas_model_ready.csv",
+  "generated_at": "2026-09-19T16:48:16.060107",
+  "total_calendar_days": 176,
+  "date_range_start": "2025-11-01",
+  "date_range_end": "2026-04-25",
+  "duplicate_dates_count": 0,
+  "calendar_continuity": "176 consecutive calendar days (zero gaps)",
+  "target_variable": "target_biogas_next_day_nm3",
+  "target_unit": "Normal Cubic Meters (Nm3/day)",
+  "prediction_horizon": "1 day ahead (t+1)",
+  "valid_target_rows": 151,
+  "unrecorded_or_shutdown_target_rows": 25,
+  "target_imputation_policy": "STRICT ZERO IMPUTATION - unrecorded target days are flagged and excluded from training loss",
+  "feature_count": 63,
+  "feature_columns": [
+    "cow_dung_incoming_mt",
+    "food_waste_incoming_mt",
+    "veg_waste_incoming_mt",
+    "total_incoming_mt",
+    "processed_cow_dung_mt",
+    "processed_food_waste_mt",
+    "mavitech_processed_mt",
+    "total_processed_mt",
+    "recycle_water_m3",
+    "fresh_water_m3",
+    "total_water_m3",
+    "feed_digester_1_m3",
+    "feed_digester_2_m3",
+    "feed_total_m3",
+    "ph_inlet",
+    "ph_outlet_d1",
+    "ph_outlet_d2",
+    "temp_outlet_d1_c",
+    "temp_outlet_d2_c",
+    "raw_gas_utilized_total_nm3",
+    "scrubber_gas_flow_outlet_nm3",
+    "cow_dung_incoming_mt_was_missing",
+    "food_waste_incoming_mt_was_missing",
+    "veg_waste_incoming_mt_was_missing",
+    "total_incoming_mt_was_missing",
+    "processed_cow_dung_mt_was_missing",
+    "processed_food_waste_mt_was_missing",
+    "mavitech_processed_mt_was_missing",
+    "total_processed_mt_was_missing",
+    "recycle_water_m3_was_missing",
+    "fresh_water_m3_was_missing",
+    "total_water_m3_was_missing",
+    "feed_digester_1_m3_was_missing",
+    "feed_digester_2_m3_was_missing",
+    "feed_total_m3_was_missing",
+    "ph_inlet_was_missing",
+    "ph_outlet_d1_was_missing",
+    "ph_outlet_d2_was_missing",
+    "temp_outlet_d1_c_was_missing",
+    "temp_outlet_d2_c_was_missing",
+    "raw_gas_utilized_total_nm3_was_missing",
+    "scrubber_gas_flow_outlet_nm3_was_missing",
+    "biogas_prod_was_missing",
+    "biogas_today_nm3",
+    "biogas_lag_1d",
+    "biogas_lag_2d",
+    "biogas_lag_3d",
+    "biogas_lag_7d",
+    "feed_total_lag_1d",
+    "feedstock_incoming_lag_1d",
+    "processed_total_lag_1d",
+    "recycle_water_lag_1d",
+    "ph_d1_lag_1d",
+    "temp_d1_lag_1d",
+    "biogas_rolling_mean_3d",
+    "biogas_rolling_mean_7d",
+    "biogas_rolling_std_7d",
+    "feed_rolling_mean_7d",
+    "incoming_rolling_mean_7d",
+    "day_of_week",
+    "is_weekend",
+    "month",
+    "day_of_month"
+  ],
+  "missing_stats": {
+    "cow_dung_incoming_mt": {
+      "initial_missing": 12,
+      "pct_missing": 6.82
+    },
+    "food_waste_incoming_mt": {
+      "initial_missing": 13,
+      "pct_missing": 7.39
+    },
+    "veg_waste_incoming_mt": {
+      "initial_missing": 13,
+      "pct_missing": 7.39
+    },
+    "total_incoming_mt": {
+      "initial_missing": 13,
+      "pct_missing": 7.39
+    },
+    "processed_cow_dung_mt": {
+      "initial_missing": 11,
+      "pct_missing": 6.25
+    },
+    "processed_food_waste_mt": {
+      "initial_missing": 11,
+      "pct_missing": 6.25
+    },
+    "mavitech_processed_mt": {
+      "initial_missing": 12,
+      "pct_missing": 6.82
+    },
+    "total_processed_mt": {
+      "initial_missing": 12,
+      "pct_missing": 6.82
+    },
+    "recycle_water_m3": {
+      "initial_missing": 61,
+      "pct_missing": 34.66
+    },
+    "fresh_water_m3": {
+      "initial_missing": 176,
+      "pct_missing": 100.0
+    },
+    "total_water_m3": {
+      "initial_missing": 176,
+      "pct_missing": 100.0
+    },
+    "feed_digester_1_m3": {
+      "initial_missing": 39,
+      "pct_missing": 22.16
+    },
+    "feed_digester_2_m3": {
+      "initial_missing": 39,
+      "pct_missing": 22.16
+    },
+    "feed_total_m3": {
+      "initial_missing": 81,
+      "pct_missing": 46.02
+    },
+    "ph_inlet": {
+      "initial_missing": 48,
+      "pct_missing": 27.27
+    },
+    "ph_outlet_d1": {
+      "initial_missing": 35,
+      "pct_missing": 19.89
+    },
+    "ph_outlet_d2": {
+      "initial_missing": 34,
+      "pct_missing": 19.32
+    },
+    "temp_outlet_d1_c": {
+      "initial_missing": 24,
+      "pct_missing": 13.64
+    },
+    "temp_outlet_d2_c": {
+      "initial_missing": 24,
+      "pct_missing": 13.64
+    },
+    "raw_gas_d1_nm3": {
+      "initial_missing": 24,
+      "pct_missing": 13.64
+    },
+    "raw_gas_d2_nm3": {
+      "initial_missing": 24,
+      "pct_missing": 13.64
+    },
+    "raw_gas_total_nm3": {
+      "initial_missing": 37,
+      "pct_missing": 21.02
+    },
+    "raw_gas_utilized_total_nm3": {
+      "initial_missing": 15,
+      "pct_missing": 8.52
+    },
+    "scrubber_gas_flow_outlet_nm3": {
+      "initial_missing": 16,
+      "pct_missing": 9.09
+    }
+  }
+}

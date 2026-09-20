@@ -1,0 +1,1508 @@
+{
+  "model_ready": {
+    "shape": [
+      176,
+      71
+    ],
+    "columns": [
+      "date",
+      "cow_dung_incoming_mt",
+      "food_waste_incoming_mt",
+      "veg_waste_incoming_mt",
+      "total_incoming_mt",
+      "processed_cow_dung_mt",
+      "processed_food_waste_mt",
+      "mavitech_processed_mt",
+      "total_processed_mt",
+      "recycle_water_m3",
+      "fresh_water_m3",
+      "total_water_m3",
+      "feed_digester_1_m3",
+      "feed_digester_2_m3",
+      "feed_total_m3",
+      "ph_inlet",
+      "ph_outlet_d1",
+      "ph_outlet_d2",
+      "temp_outlet_d1_c",
+      "temp_outlet_d2_c",
+      "raw_gas_d1_nm3",
+      "raw_gas_d2_nm3",
+      "raw_gas_total_nm3",
+      "raw_gas_utilized_total_nm3",
+      "scrubber_gas_flow_outlet_nm3",
+      "raw_gas_total_raw_nm3",
+      "cow_dung_incoming_mt_was_missing",
+      "food_waste_incoming_mt_was_missing",
+      "veg_waste_incoming_mt_was_missing",
+      "total_incoming_mt_was_missing",
+      "processed_cow_dung_mt_was_missing",
+      "processed_food_waste_mt_was_missing",
+      "mavitech_processed_mt_was_missing",
+      "total_processed_mt_was_missing",
+      "recycle_water_m3_was_missing",
+      "fresh_water_m3_was_missing",
+      "total_water_m3_was_missing",
+      "feed_digester_1_m3_was_missing",
+      "feed_digester_2_m3_was_missing",
+      "feed_total_m3_was_missing",
+      "ph_inlet_was_missing",
+      "ph_outlet_d1_was_missing",
+      "ph_outlet_d2_was_missing",
+      "temp_outlet_d1_c_was_missing",
+      "temp_outlet_d2_c_was_missing",
+      "raw_gas_utilized_total_nm3_was_missing",
+      "scrubber_gas_flow_outlet_nm3_was_missing",
+      "biogas_prod_was_missing",
+      "biogas_prod_feature_imputed",
+      "target_biogas_next_day_nm3",
+      "target_is_valid",
+      "biogas_today_nm3",
+      "biogas_lag_1d",
+      "biogas_lag_2d",
+      "biogas_lag_3d",
+      "biogas_lag_7d",
+      "feed_total_lag_1d",
+      "feedstock_incoming_lag_1d",
+      "processed_total_lag_1d",
+      "recycle_water_lag_1d",
+      "ph_d1_lag_1d",
+      "temp_d1_lag_1d",
+      "biogas_rolling_mean_3d",
+      "biogas_rolling_mean_7d",
+      "biogas_rolling_std_7d",
+      "feed_rolling_mean_7d",
+      "incoming_rolling_mean_7d",
+      "day_of_week",
+      "is_weekend",
+      "month",
+      "day_of_month"
+    ],
+    "dtypes": {
+      "date": "str",
+      "cow_dung_incoming_mt": "float64",
+      "food_waste_incoming_mt": "float64",
+      "veg_waste_incoming_mt": "float64",
+      "total_incoming_mt": "float64",
+      "processed_cow_dung_mt": "float64",
+      "processed_food_waste_mt": "float64",
+      "mavitech_processed_mt": "float64",
+      "total_processed_mt": "float64",
+      "recycle_water_m3": "float64",
+      "fresh_water_m3": "float64",
+      "total_water_m3": "float64",
+      "feed_digester_1_m3": "float64",
+      "feed_digester_2_m3": "float64",
+      "feed_total_m3": "float64",
+      "ph_inlet": "float64",
+      "ph_outlet_d1": "float64",
+      "ph_outlet_d2": "float64",
+      "temp_outlet_d1_c": "float64",
+      "temp_outlet_d2_c": "float64",
+      "raw_gas_d1_nm3": "float64",
+      "raw_gas_d2_nm3": "float64",
+      "raw_gas_total_nm3": "float64",
+      "raw_gas_utilized_total_nm3": "float64",
+      "scrubber_gas_flow_outlet_nm3": "float64",
+      "raw_gas_total_raw_nm3": "float64",
+      "cow_dung_incoming_mt_was_missing": "int64",
+      "food_waste_incoming_mt_was_missing": "int64",
+      "veg_waste_incoming_mt_was_missing": "int64",
+      "total_incoming_mt_was_missing": "int64",
+      "processed_cow_dung_mt_was_missing": "int64",
+      "processed_food_waste_mt_was_missing": "int64",
+      "mavitech_processed_mt_was_missing": "int64",
+      "total_processed_mt_was_missing": "int64",
+      "recycle_water_m3_was_missing": "int64",
+      "fresh_water_m3_was_missing": "int64",
+      "total_water_m3_was_missing": "int64",
+      "feed_digester_1_m3_was_missing": "int64",
+      "feed_digester_2_m3_was_missing": "int64",
+      "feed_total_m3_was_missing": "int64",
+      "ph_inlet_was_missing": "int64",
+      "ph_outlet_d1_was_missing": "int64",
+      "ph_outlet_d2_was_missing": "int64",
+      "temp_outlet_d1_c_was_missing": "int64",
+      "temp_outlet_d2_c_was_missing": "int64",
+      "raw_gas_utilized_total_nm3_was_missing": "int64",
+      "scrubber_gas_flow_outlet_nm3_was_missing": "int64",
+      "biogas_prod_was_missing": "int64",
+      "biogas_prod_feature_imputed": "float64",
+      "target_biogas_next_day_nm3": "float64",
+      "target_is_valid": "int64",
+      "biogas_today_nm3": "float64",
+      "biogas_lag_1d": "float64",
+      "biogas_lag_2d": "float64",
+      "biogas_lag_3d": "float64",
+      "biogas_lag_7d": "float64",
+      "feed_total_lag_1d": "float64",
+      "feedstock_incoming_lag_1d": "float64",
+      "processed_total_lag_1d": "float64",
+      "recycle_water_lag_1d": "float64",
+      "ph_d1_lag_1d": "float64",
+      "temp_d1_lag_1d": "float64",
+      "biogas_rolling_mean_3d": "float64",
+      "biogas_rolling_mean_7d": "float64",
+      "biogas_rolling_std_7d": "float64",
+      "feed_rolling_mean_7d": "float64",
+      "incoming_rolling_mean_7d": "float64",
+      "day_of_week": "int64",
+      "is_weekend": "int64",
+      "month": "int64",
+      "day_of_month": "int64"
+    },
+    "missing": {
+      "raw_gas_d1_nm3": 24,
+      "raw_gas_d2_nm3": 24,
+      "raw_gas_total_nm3": 24,
+      "raw_gas_total_raw_nm3": 24,
+      "target_biogas_next_day_nm3": 25
+    },
+    "total_nulls": 121,
+    "duplicate_rows": 0,
+    "duplicate_dates": 0,
+    "date_min": "2025-11-01",
+    "date_max": "2026-04-25",
+    "date_count": 176,
+    "missing_calendar_days_count": 0,
+    "calendar_span_days": 176,
+    "constant_cols": [
+      [
+        "fresh_water_m3",
+        1,
+        [
+          0.0
+        ]
+      ],
+      [
+        "total_water_m3",
+        1,
+        [
+          0.0
+        ]
+      ],
+      [
+        "fresh_water_m3_was_missing",
+        1,
+        [
+          1
+        ]
+      ],
+      [
+        "total_water_m3_was_missing",
+        1,
+        [
+          1
+        ]
+      ]
+    ],
+    "near_constant_cols": [],
+    "stats": {
+      "cow_dung_incoming_mt": {
+        "count": 176,
+        "mean": 15.925,
+        "std": 7.7826093310662845,
+        "min": 0.0,
+        "p25": 9.535,
+        "median": 15.01,
+        "p75": 22.2875,
+        "max": 40.27,
+        "outliers_iqr_count": 0,
+        "zeros_count": 3
+      },
+      "food_waste_incoming_mt": {
+        "count": 176,
+        "mean": 23.03159090909091,
+        "std": 7.397910652743382,
+        "min": 2.2,
+        "p25": 18.37,
+        "median": 23.33,
+        "p75": 27.9225,
+        "max": 47.15,
+        "outliers_iqr_count": 3,
+        "zeros_count": 0
+      },
+      "veg_waste_incoming_mt": {
+        "count": 176,
+        "mean": 104.14977272727273,
+        "std": 33.36089397491013,
+        "min": 0.0,
+        "p25": 89.3175,
+        "median": 110.69,
+        "p75": 125.2675,
+        "max": 178.38,
+        "outliers_iqr_count": 10,
+        "zeros_count": 6
+      },
+      "total_incoming_mt": {
+        "count": 176,
+        "mean": 143.40903409090907,
+        "std": 33.673664210290546,
+        "min": 10.83,
+        "p25": 130.4,
+        "median": 151.125,
+        "p75": 162.0,
+        "max": 205.14,
+        "outliers_iqr_count": 10,
+        "zeros_count": 0
+      },
+      "processed_cow_dung_mt": {
+        "count": 176,
+        "mean": 16.309375,
+        "std": 7.658104961878157,
+        "min": 0.0,
+        "p25": 10.0225,
+        "median": 15.135,
+        "p75": 22.552500000000002,
+        "max": 33.71,
+        "outliers_iqr_count": 0,
+        "zeros_count": 1
+      },
+      "processed_food_waste_mt": {
+        "count": 176,
+        "mean": 22.270625,
+        "std": 7.50921621599561,
+        "min": 0.85,
+        "p25": 17.2725,
+        "median": 22.13,
+        "p75": 25.9575,
+        "max": 48.83,
+        "outliers_iqr_count": 4,
+        "zeros_count": 0
+      },
+      "mavitech_processed_mt": {
+        "count": 176,
+        "mean": 64.24147727272727,
+        "std": 44.81523893982678,
+        "min": 0.0,
+        "p25": 31.375,
+        "median": 57.25,
+        "p75": 72.8125,
+        "max": 176.5,
+        "outliers_iqr_count": 21,
+        "zeros_count": 7
+      },
+      "total_processed_mt": {
+        "count": 176,
+        "mean": 109.70511363636363,
+        "std": 34.730961271524805,
+        "min": 19.59,
+        "p25": 87.24249999999999,
+        "median": 107.435,
+        "p75": 129.19,
+        "max": 200.08,
+        "outliers_iqr_count": 4,
+        "zeros_count": 0
+      },
+      "recycle_water_m3": {
+        "count": 176,
+        "mean": 49.96022727272727,
+        "std": 11.722194234115797,
+        "min": 5.0,
+        "p25": 41.0,
+        "median": 51.0,
+        "p75": 54.0,
+        "max": 109.0,
+        "outliers_iqr_count": 8,
+        "zeros_count": 0
+      },
+      "fresh_water_m3": {
+        "count": 176,
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 0.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 176
+      },
+      "total_water_m3": {
+        "count": 176,
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 0.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 176
+      },
+      "feed_digester_1_m3": {
+        "count": 176,
+        "mean": 108.7840909090909,
+        "std": 29.42494524374519,
+        "min": 46.0,
+        "p25": 91.0,
+        "median": 100.0,
+        "p75": 124.25,
+        "max": 180.0,
+        "outliers_iqr_count": 4,
+        "zeros_count": 0
+      },
+      "feed_digester_2_m3": {
+        "count": 176,
+        "mean": 99.48863636363636,
+        "std": 36.416948744288774,
+        "min": 0.0,
+        "p25": 85.0,
+        "median": 99.0,
+        "p75": 120.25,
+        "max": 165.0,
+        "outliers_iqr_count": 10,
+        "zeros_count": 3
+      },
+      "feed_total_m3": {
+        "count": 176,
+        "mean": 207.5568181818182,
+        "std": 60.809089161697905,
+        "min": 64.0,
+        "p25": 177.5,
+        "median": 197.0,
+        "p75": 242.25,
+        "max": 325.0,
+        "outliers_iqr_count": 4,
+        "zeros_count": 0
+      },
+      "ph_inlet": {
+        "count": 176,
+        "mean": 6.030852272727273,
+        "std": 0.26604373602947223,
+        "min": 4.85,
+        "p25": 6.03,
+        "median": 6.06,
+        "p75": 6.2,
+        "max": 6.5,
+        "outliers_iqr_count": 25,
+        "zeros_count": 0
+      },
+      "ph_outlet_d1": {
+        "count": 176,
+        "mean": 7.5443181818181815,
+        "std": 0.18490334435387246,
+        "min": 7.1,
+        "p25": 7.44,
+        "median": 7.57,
+        "p75": 7.7,
+        "max": 7.8,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "ph_outlet_d2": {
+        "count": 176,
+        "mean": 7.534999999999999,
+        "std": 0.17485013991579024,
+        "min": 7.1,
+        "p25": 7.4,
+        "median": 7.6,
+        "p75": 7.68,
+        "max": 7.99,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "temp_outlet_d1_c": {
+        "count": 176,
+        "mean": 35.65909090909091,
+        "std": 1.3065230948600173,
+        "min": 33.0,
+        "p25": 35.0,
+        "median": 35.0,
+        "p75": 37.0,
+        "max": 38.1,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "temp_outlet_d2_c": {
+        "count": 176,
+        "mean": 35.20965909090909,
+        "std": 1.6182063784069334,
+        "min": 32.0,
+        "p25": 34.0,
+        "median": 35.0,
+        "p75": 36.7,
+        "max": 38.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "raw_gas_d1_nm3": {
+        "count": 152,
+        "mean": 3077.315789473684,
+        "std": 993.8359320740481,
+        "min": 1389.0,
+        "p25": 2296.25,
+        "median": 2861.0,
+        "p75": 3686.5,
+        "max": 5817.0,
+        "outliers_iqr_count": 1,
+        "zeros_count": 0
+      },
+      "raw_gas_d2_nm3": {
+        "count": 152,
+        "mean": 2971.5394736842104,
+        "std": 1000.235832334462,
+        "min": 0.0,
+        "p25": 2437.25,
+        "median": 2946.0,
+        "p75": 3529.75,
+        "max": 5516.0,
+        "outliers_iqr_count": 8,
+        "zeros_count": 3
+      },
+      "raw_gas_total_nm3": {
+        "count": 152,
+        "mean": 6048.855263157895,
+        "std": 1787.6332216659837,
+        "min": 2070.0,
+        "p25": 4756.5,
+        "median": 5606.5,
+        "p75": 7178.25,
+        "max": 10749.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "raw_gas_utilized_total_nm3": {
+        "count": 176,
+        "mean": 5526.954545454545,
+        "std": 1731.561461532606,
+        "min": 1220.0,
+        "p25": 4390.0,
+        "median": 5429.5,
+        "p75": 6689.0,
+        "max": 9661.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "scrubber_gas_flow_outlet_nm3": {
+        "count": 176,
+        "mean": 6390.482954545455,
+        "std": 2175.155692225749,
+        "min": 1526.0,
+        "p25": 4986.0,
+        "median": 6115.0,
+        "p75": 7754.75,
+        "max": 17994.0,
+        "outliers_iqr_count": 2,
+        "zeros_count": 0
+      },
+      "raw_gas_total_raw_nm3": {
+        "count": 152,
+        "mean": 6048.855263157895,
+        "std": 1787.6332216659837,
+        "min": 2070.0,
+        "p25": 4756.5,
+        "median": 5606.5,
+        "p75": 7178.25,
+        "max": 10749.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "cow_dung_incoming_mt_was_missing": {
+        "count": 176,
+        "mean": 0.06818181818181818,
+        "std": 0.25277678670341525,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 12,
+        "zeros_count": 164
+      },
+      "food_waste_incoming_mt_was_missing": {
+        "count": 176,
+        "mean": 0.07386363636363637,
+        "std": 0.26229506533425534,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 13,
+        "zeros_count": 163
+      },
+      "veg_waste_incoming_mt_was_missing": {
+        "count": 176,
+        "mean": 0.07386363636363637,
+        "std": 0.26229506533425534,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 13,
+        "zeros_count": 163
+      },
+      "total_incoming_mt_was_missing": {
+        "count": 176,
+        "mean": 0.07386363636363637,
+        "std": 0.26229506533425534,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 13,
+        "zeros_count": 163
+      },
+      "processed_cow_dung_mt_was_missing": {
+        "count": 176,
+        "mean": 0.0625,
+        "std": 0.2427520781138061,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 11,
+        "zeros_count": 165
+      },
+      "processed_food_waste_mt_was_missing": {
+        "count": 176,
+        "mean": 0.0625,
+        "std": 0.2427520781138061,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 11,
+        "zeros_count": 165
+      },
+      "mavitech_processed_mt_was_missing": {
+        "count": 176,
+        "mean": 0.06818181818181818,
+        "std": 0.25277678670341525,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 12,
+        "zeros_count": 164
+      },
+      "total_processed_mt_was_missing": {
+        "count": 176,
+        "mean": 0.06818181818181818,
+        "std": 0.25277678670341525,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 12,
+        "zeros_count": 164
+      },
+      "recycle_water_m3_was_missing": {
+        "count": 176,
+        "mean": 0.3465909090909091,
+        "std": 0.47724180481150247,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "max": 1.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 115
+      },
+      "fresh_water_m3_was_missing": {
+        "count": 176,
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "max": 1.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "total_water_m3_was_missing": {
+        "count": 176,
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "max": 1.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "feed_digester_1_m3_was_missing": {
+        "count": 176,
+        "mean": 0.2215909090909091,
+        "std": 0.416502132016183,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 39,
+        "zeros_count": 137
+      },
+      "feed_digester_2_m3_was_missing": {
+        "count": 176,
+        "mean": 0.2215909090909091,
+        "std": 0.416502132016183,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 39,
+        "zeros_count": 137
+      },
+      "feed_total_m3_was_missing": {
+        "count": 176,
+        "mean": 0.2215909090909091,
+        "std": 0.416502132016183,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 39,
+        "zeros_count": 137
+      },
+      "ph_inlet_was_missing": {
+        "count": 176,
+        "mean": 0.2727272727272727,
+        "std": 0.446632420991266,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "max": 1.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 128
+      },
+      "ph_outlet_d1_was_missing": {
+        "count": 176,
+        "mean": 0.19886363636363635,
+        "std": 0.4002839900961226,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 35,
+        "zeros_count": 141
+      },
+      "ph_outlet_d2_was_missing": {
+        "count": 176,
+        "mean": 0.19318181818181818,
+        "std": 0.39592075817421696,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 34,
+        "zeros_count": 142
+      },
+      "temp_outlet_d1_c_was_missing": {
+        "count": 176,
+        "mean": 0.13636363636363635,
+        "std": 0.3441533937673119,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 24,
+        "zeros_count": 152
+      },
+      "temp_outlet_d2_c_was_missing": {
+        "count": 176,
+        "mean": 0.13636363636363635,
+        "std": 0.3441533937673119,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 24,
+        "zeros_count": 152
+      },
+      "raw_gas_utilized_total_nm3_was_missing": {
+        "count": 176,
+        "mean": 0.08522727272727272,
+        "std": 0.2800162332956625,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 15,
+        "zeros_count": 161
+      },
+      "scrubber_gas_flow_outlet_nm3_was_missing": {
+        "count": 176,
+        "mean": 0.09090909090909091,
+        "std": 0.28829998806257884,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 16,
+        "zeros_count": 160
+      },
+      "biogas_prod_was_missing": {
+        "count": 176,
+        "mean": 0.13636363636363635,
+        "std": 0.3441533937673119,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "outliers_iqr_count": 24,
+        "zeros_count": 152
+      },
+      "biogas_prod_feature_imputed": {
+        "count": 176,
+        "mean": 6224.204545454545,
+        "std": 1720.822113553143,
+        "min": 2070.0,
+        "p25": 4893.0,
+        "median": 5940.5,
+        "p75": 7307.0,
+        "max": 10749.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "target_biogas_next_day_nm3": {
+        "count": 151,
+        "mean": 6066.112582781457,
+        "std": 1780.833252695851,
+        "min": 2070.0,
+        "p25": 4781.0,
+        "median": 5610.0,
+        "p75": 7195.5,
+        "max": 10749.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "target_is_valid": {
+        "count": 176,
+        "mean": 0.8579545454545454,
+        "std": 0.3500927520885502,
+        "min": 0.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "max": 1.0,
+        "outliers_iqr_count": 25,
+        "zeros_count": 25
+      },
+      "biogas_today_nm3": {
+        "count": 176,
+        "mean": 6224.204545454545,
+        "std": 1720.822113553143,
+        "min": 2070.0,
+        "p25": 4893.0,
+        "median": 5940.5,
+        "p75": 7307.0,
+        "max": 10749.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "biogas_lag_1d": {
+        "count": 176,
+        "mean": 6202.25,
+        "std": 1731.544068990779,
+        "min": 2070.0,
+        "p25": 4863.0,
+        "median": 5927.0,
+        "p75": 7307.0,
+        "max": 10749.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "biogas_lag_2d": {
+        "count": 176,
+        "mean": 6180.295454545455,
+        "std": 1741.9217739305936,
+        "min": 2070.0,
+        "p25": 4860.5,
+        "median": 5915.0,
+        "p75": 7307.0,
+        "max": 10749.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "biogas_lag_3d": {
+        "count": 176,
+        "mean": 6158.340909090909,
+        "std": 1751.961345864285,
+        "min": 2070.0,
+        "p25": 4850.0,
+        "median": 5892.0,
+        "p75": 7307.0,
+        "max": 10749.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "biogas_lag_7d": {
+        "count": 176,
+        "mean": 6070.522727272727,
+        "std": 1788.849293195554,
+        "min": 2070.0,
+        "p25": 4745.5,
+        "median": 5829.0,
+        "p75": 7307.0,
+        "max": 10749.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "feed_total_lag_1d": {
+        "count": 176,
+        "mean": 207.3465909090909,
+        "std": 60.90966885265639,
+        "min": 64.0,
+        "p25": 175.5,
+        "median": 197.0,
+        "p75": 242.25,
+        "max": 325.0,
+        "outliers_iqr_count": 4,
+        "zeros_count": 0
+      },
+      "feedstock_incoming_lag_1d": {
+        "count": 176,
+        "mean": 143.16386363636363,
+        "std": 33.69461031701635,
+        "min": 10.83,
+        "p25": 129.68,
+        "median": 150.89499999999998,
+        "p75": 162.0,
+        "max": 205.14,
+        "outliers_iqr_count": 10,
+        "zeros_count": 0
+      },
+      "processed_total_lag_1d": {
+        "count": 176,
+        "mean": 109.51664772727273,
+        "std": 34.97501216764082,
+        "min": 19.59,
+        "p25": 87.24249999999999,
+        "median": 107.435,
+        "p75": 129.19,
+        "max": 200.08,
+        "outliers_iqr_count": 4,
+        "zeros_count": 0
+      },
+      "recycle_water_lag_1d": {
+        "count": 176,
+        "mean": 49.85227272727273,
+        "std": 11.799796388293945,
+        "min": 5.0,
+        "p25": 41.0,
+        "median": 51.0,
+        "p75": 54.0,
+        "max": 109.0,
+        "outliers_iqr_count": 8,
+        "zeros_count": 0
+      },
+      "ph_d1_lag_1d": {
+        "count": 176,
+        "mean": 7.544545454545453,
+        "std": 0.18495966566275446,
+        "min": 7.1,
+        "p25": 7.44,
+        "median": 7.57,
+        "p75": 7.7,
+        "max": 7.8,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "temp_d1_lag_1d": {
+        "count": 176,
+        "mean": 35.64772727272727,
+        "std": 1.3034878286660445,
+        "min": 33.0,
+        "p25": 35.0,
+        "median": 35.0,
+        "p75": 37.0,
+        "max": 38.1,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "biogas_rolling_mean_3d": {
+        "count": 176,
+        "mean": 6202.408143939395,
+        "std": 1604.7097733709809,
+        "min": 2847.6666666666665,
+        "p25": 4929.416666666667,
+        "median": 5965.5,
+        "p75": 7307.0,
+        "max": 9944.666666666666,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "biogas_rolling_mean_7d": {
+        "count": 176,
+        "mean": 6155.833522727273,
+        "std": 1535.4885241744903,
+        "min": 3041.0,
+        "p25": 4897.785714285715,
+        "median": 5879.071428571429,
+        "p75": 7307.0,
+        "max": 9545.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "biogas_rolling_std_7d": {
+        "count": 176,
+        "mean": 785.2847942573634,
+        "std": 482.4990840335628,
+        "min": 0.0,
+        "p25": 479.3564815429588,
+        "median": 778.536300169066,
+        "p75": 1056.3036466972867,
+        "max": 2137.3168091925804,
+        "outliers_iqr_count": 7,
+        "zeros_count": 18
+      },
+      "feed_rolling_mean_7d": {
+        "count": 176,
+        "mean": 207.22671807359305,
+        "std": 53.19081726404144,
+        "min": 104.85714285714286,
+        "p25": 189.67857142857144,
+        "median": 198.95714285714286,
+        "p75": 226.57142857142858,
+        "max": 315.2857142857143,
+        "outliers_iqr_count": 42,
+        "zeros_count": 0
+      },
+      "incoming_rolling_mean_7d": {
+        "count": 176,
+        "mean": 142.75306682900433,
+        "std": 25.956654934010583,
+        "min": 30.81714285714286,
+        "p25": 134.28142857142856,
+        "median": 147.55857142857144,
+        "p75": 157.37964285714287,
+        "max": 193.12857142857143,
+        "outliers_iqr_count": 11,
+        "zeros_count": 0
+      },
+      "day_of_week": {
+        "count": 176,
+        "mean": 3.0113636363636362,
+        "std": 2.0056737702645644,
+        "min": 0.0,
+        "p25": 1.0,
+        "median": 3.0,
+        "p75": 5.0,
+        "max": 6.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 25
+      },
+      "is_weekend": {
+        "count": 176,
+        "mean": 0.2897727272727273,
+        "std": 0.4549511176824599,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "max": 1.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 125
+      },
+      "month": {
+        "count": 176,
+        "mean": 5.579545454545454,
+        "std": 4.431630698665069,
+        "min": 1.0,
+        "p25": 2.0,
+        "median": 3.0,
+        "p75": 11.0,
+        "max": 12.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      },
+      "day_of_month": {
+        "count": 176,
+        "mean": 15.25,
+        "std": 8.622561767164758,
+        "min": 1.0,
+        "p25": 8.0,
+        "median": 15.0,
+        "p75": 22.25,
+        "max": 31.0,
+        "outliers_iqr_count": 0,
+        "zeros_count": 0
+      }
+    }
+  },
+  "splits": {
+    "train": {
+      "shape": [
+        105,
+        71
+      ],
+      "date_min": "2025-11-01",
+      "date_max": "2026-02-14",
+      "valid_targets": 105,
+      "nan_targets": 0,
+      "target_min": 2070.0,
+      "target_mean": 5300.390476190476,
+      "target_max": 9183.0
+    },
+    "val": {
+      "shape": [
+        22,
+        71
+      ],
+      "date_min": "2026-02-15",
+      "date_max": "2026-03-09",
+      "valid_targets": 22,
+      "nan_targets": 0,
+      "target_min": 3780.0,
+      "target_mean": 8278.318181818182,
+      "target_max": 10749.0
+    },
+    "test": {
+      "shape": [
+        24,
+        71
+      ],
+      "date_min": "2026-03-10",
+      "date_max": "2026-04-02",
+      "valid_targets": 24,
+      "nan_targets": 0,
+      "target_min": 5462.0,
+      "target_mean": 7388.291666666667,
+      "target_max": 9649.0
+    },
+    "train_val_overlap": [],
+    "val_test_overlap": [],
+    "train_test_overlap": []
+  },
+  "master_excel": {
+    "Master data": {
+      "shape": [
+        1068,
+        93
+      ],
+      "cols_count": 93
+    },
+    "Sheet1": {
+      "shape": [
+        0,
+        0
+      ],
+      "cols_count": 0
+    },
+    "Raw materials feed": {
+      "shape": [
+        393,
+        10
+      ],
+      "cols_count": 10
+    },
+    "Gas filling": {
+      "shape": [
+        84,
+        11
+      ],
+      "cols_count": 11
+    }
+  },
+  "synthetic": {
+    "shape": [
+      180,
+      26
+    ],
+    "columns": [
+      "device_id",
+      "timestamp",
+      "temperature_c",
+      "ambient_temperature_c",
+      "ph",
+      "inlet_ph",
+      "pressure_bar",
+      "gas_flow_m3_day",
+      "biogas_production_m3_day",
+      "methane_percent",
+      "co2_percent",
+      "h2s_ppm",
+      "feedstock_mass_kg",
+      "feedstock_type",
+      "total_solids_percent",
+      "volatile_solids_percent",
+      "agitator_runtime_min",
+      "solar_voltage_v",
+      "solar_current_a",
+      "solar_power_w",
+      "battery_voltage_v",
+      "battery_soc_percent",
+      "system_load_current_ma",
+      "system_load_power_w",
+      "solar_status",
+      "source"
+    ],
+    "missing": {},
+    "date_min": "2026-01-01 00:00:00",
+    "date_max": "2026-06-29 00:00:00",
+    "biogas_mean": 2.9802166666666663,
+    "biogas_min": 1.331,
+    "biogas_max": 8.356
+  },
+  "sqlite": {
+    "devices": {
+      "count": 4,
+      "columns": [
+        "id",
+        "name",
+        "location",
+        "status",
+        "mode",
+        "is_active",
+        "last_seen",
+        "created_at"
+      ],
+      "source_counts": {}
+    },
+    "model_runs": {
+      "count": 1,
+      "columns": [
+        "id",
+        "model_name",
+        "model_type",
+        "version",
+        "dataset_source",
+        "mae",
+        "rmse",
+        "r2",
+        "nnse",
+        "hyperparameters",
+        "feature_list",
+        "model_path",
+        "created_at"
+      ],
+      "source_counts": {}
+    },
+    "sensor_readings": {
+      "count": 386,
+      "columns": [
+        "id",
+        "device_id",
+        "timestamp",
+        "temperature_c",
+        "ambient_temperature_c",
+        "ph",
+        "inlet_ph",
+        "pressure_bar",
+        "gas_flow_m3_day",
+        "biogas_production_m3_day",
+        "methane_percent",
+        "co2_percent",
+        "h2s_ppm",
+        "feedstock_mass_kg",
+        "feedstock_type",
+        "agitator_runtime_min",
+        "source"
+      ],
+      "source_counts": {
+        "live_esp32": 48,
+        "synthetic": 338
+      }
+    },
+    "forecast_results": {
+      "count": 968,
+      "columns": [
+        "id",
+        "device_id",
+        "timestamp",
+        "target_date",
+        "predicted_biogas_m3_day",
+        "lower_bound_m3_day",
+        "upper_bound_m3_day",
+        "model_name",
+        "model_version",
+        "top_feature_1",
+        "top_feature_2",
+        "top_feature_3",
+        "recommendation",
+        "input_biogas_m3_day",
+        "preprocessing_version",
+        "data_source",
+        "status",
+        "input_timestamp",
+        "domain_valid",
+        "domain_note"
+      ],
+      "source_counts": {
+        "DEMO_SYNTHETIC": 374,
+        "LIVE_IOT": 120,
+        "REAL_SPARK_HISTORICAL": 156,
+        "USER_UPLOAD": 318
+      }
+    },
+    "alerts": {
+      "count": 79,
+      "columns": [
+        "id",
+        "device_id",
+        "timestamp",
+        "severity",
+        "parameter",
+        "triggered_value",
+        "threshold_limit",
+        "message",
+        "is_acknowledged",
+        "acknowledged_at"
+      ],
+      "source_counts": {}
+    },
+    "solar_metrics": {
+      "count": 259,
+      "columns": [
+        "id",
+        "device_id",
+        "timestamp",
+        "solar_voltage_v",
+        "solar_current_a",
+        "solar_power_w",
+        "battery_voltage_v",
+        "battery_soc_percent",
+        "system_load_current_ma",
+        "system_load_power_w",
+        "solar_status"
+      ],
+      "source_counts": {}
+    }
+  },
+  "results_csvs": {
+    "baseline_results.csv": {
+      "shape": [
+        5,
+        11
+      ],
+      "columns": [
+        "model",
+        "type",
+        "description",
+        "mae",
+        "rmse",
+        "mape_pct",
+        "r2",
+        "evaluated_at",
+        "test_samples",
+        "test_date_start",
+        "test_date_end"
+      ]
+    },
+    "classical_model_results.csv": {
+      "shape": [
+        8,
+        10
+      ],
+      "columns": [
+        "model",
+        "category",
+        "hyperparameters",
+        "val_mae",
+        "val_rmse",
+        "val_r2",
+        "test_mae",
+        "test_rmse",
+        "test_mape_pct",
+        "test_r2"
+      ]
+    },
+    "EXPERIMENT_LOG.csv": {
+      "shape": [
+        21,
+        23
+      ],
+      "columns": [
+        "experiment_id",
+        "model_family",
+        "model_name",
+        "category",
+        "feature_set",
+        "lookback_days",
+        "hyperparameters",
+        "train_dates",
+        "val_dates",
+        "test_dates",
+        "val_mae",
+        "val_rmse",
+        "val_r2",
+        "test_mae",
+        "test_rmse",
+        "test_mape_pct",
+        "test_r2",
+        "delta_mae_vs_pers",
+        "delta_rmse_vs_pers",
+        "pct_imp_rmse",
+        "beats_persistence",
+        "random_seed",
+        "preprocessing_version"
+      ]
+    },
+    "feature_ablation_results.csv": {
+      "shape": [
+        25,
+        11
+      ],
+      "columns": [
+        "group_id",
+        "feature_group",
+        "model",
+        "num_features",
+        "val_mae",
+        "val_rmse",
+        "val_r2",
+        "test_mae",
+        "test_rmse",
+        "test_mape_pct",
+        "test_r2"
+      ]
+    },
+    "sfoa_search_results.csv": {
+      "shape": [
+        48,
+        12
+      ],
+      "columns": [
+        "iteration",
+        "sunflower_id",
+        "val_rmse",
+        "val_mae",
+        "val_r2",
+        "is_current_sun",
+        "lookback",
+        "hidden_dim",
+        "dropout",
+        "lr",
+        "weight_decay",
+        "gamma_phys"
+      ]
+    },
+    "temporal_model_results.csv": {
+      "shape": [
+        13,
+        12
+      ],
+      "columns": [
+        "model",
+        "type",
+        "lookback_days",
+        "residual_head",
+        "model_artifact",
+        "val_mae",
+        "val_rmse",
+        "val_r2",
+        "test_mae",
+        "test_rmse",
+        "test_mape_pct",
+        "test_r2"
+      ]
+    },
+    "walk_forward_full_audit.csv": {
+      "shape": [
+        12,
+        15
+      ],
+      "columns": [
+        "window_id",
+        "window_name",
+        "train_range",
+        "val_range",
+        "test_range",
+        "train_n",
+        "val_n",
+        "test_n",
+        "model",
+        "actual_sample",
+        "pred_sample",
+        "mae",
+        "rmse",
+        "mape_pct",
+        "r2"
+      ]
+    },
+    "walk_forward_results.csv": {
+      "shape": [
+        12,
+        9
+      ],
+      "columns": [
+        "window_id",
+        "window_name",
+        "test_date_start",
+        "test_date_end",
+        "model",
+        "test_mae",
+        "test_rmse",
+        "test_mape_pct",
+        "test_r2"
+      ]
+    },
+    "walk_forward_xconet_results.csv": {
+      "shape": [
+        3,
+        10
+      ],
+      "columns": [
+        "window_id",
+        "window_name",
+        "test_range",
+        "test_n",
+        "test_mae",
+        "test_rmse",
+        "test_mape_pct",
+        "test_r2",
+        "actual_sample",
+        "pred_sample"
+      ]
+    },
+    "xconet_ablation_results.csv": {
+      "shape": [
+        5,
+        14
+      ],
+      "columns": [
+        "ablation_id",
+        "description",
+        "use_temporal_branch",
+        "use_cross_channel",
+        "use_physics_penalty",
+        "sfoa_optimized",
+        "param_count",
+        "val_mae",
+        "val_rmse",
+        "val_r2",
+        "test_mae",
+        "test_rmse",
+        "test_mape_pct",
+        "test_r2"
+      ]
+    },
+    "xconet_results.csv": {
+      "shape": [
+        5,
+        10
+      ],
+      "columns": [
+        "model",
+        "category",
+        "mae",
+        "rmse",
+        "mape_pct",
+        "r2",
+        "delta_rmse_vs_pers",
+        "pct_imp_rmse_vs_pers",
+        "delta_rmse_vs_best_pre_xco",
+        "pct_imp_vs_best_pre_xco"
+      ]
+    }
+  }
+}

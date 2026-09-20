@@ -1,0 +1,6 @@
+model,type,description,mae,rmse,mape_pct,r2,evaluated_at,test_samples,test_date_start,test_date_end
+Persistence (Lag-0),Naive Benchmark,y_hat(t+1) = y(t),798.83,1000.9,11.15,0.183,2026-09-15T23:15:04.988704,24,2026-03-10,2026-04-02
+Seasonal Persistence (Lag-7),Naive Benchmark,y_hat(t+1) = y(t-6),1289.83,1625.49,18.44,-1.1547,2026-09-15T23:15:04.988704,24,2026-03-10,2026-04-02
+Ridge Regression,Linear L2 Regularized,Standardized linear model (alpha=1.0),3072.69,3235.82,41.7,-7.5388,2026-09-15T23:15:04.988704,24,2026-03-10,2026-04-02
+Random Forest Regressor,Ensemble Bagging,"100 trees, max_depth=6",1193.63,1543.94,14.85,-0.944,2026-09-15T23:15:04.988704,24,2026-03-10,2026-04-02
+Gradient Boosting Regressor (XGBoost counterpart),Gradient Boosted Trees,"100 estimators, max_depth=4, lr=0.05",1576.59,1848.31,20.05,-1.786,2026-09-15T23:15:04.988704,24,2026-03-10,2026-04-02

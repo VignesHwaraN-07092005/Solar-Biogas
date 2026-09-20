@@ -1,0 +1,6 @@
+model,category,mae,rmse,mape_pct,r2,delta_rmse_vs_pers,pct_imp_rmse_vs_pers,delta_rmse_vs_best_pre_xco,pct_imp_vs_best_pre_xco
+Persistence (Lag-0),Naive Benchmark,798.83,1000.9,11.15,0.183,0.0,0.0,-43.12,-4.5
+Tuned Ridge Regression,Classical Linear,947.08,1139.13,12.14,-0.0582,-138.23,-13.81,-181.35,-18.93
+GRU (14-day Residual),Temporal Neural Network,766.61,959.4,11.01,0.2494,41.5,4.15,-1.62,-0.17
+Exponential Moving Average (EMA-0.90),Statistical Filter,769.02,957.78,10.74,0.2519,43.12,4.31,0.0,0.0
+XCO-Net (Proposed Project Model),Physics-Guided Dual-Stream,799.44,1016.92,11.23,0.1567,-16.02,-1.6,-59.14,-6.17

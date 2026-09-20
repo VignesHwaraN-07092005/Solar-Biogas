@@ -1,0 +1,65 @@
+{
+  "model_name": "SFOA-Optimized Research XCO-Net",
+  "checkpoint_path": "C:\\Users\\gssr2\\Desktop\\yesist\\archive\\research_sfoa\\xconet_sfoa_champion.pt",
+  "scaler_metadata_path": "models/gru_scaler_metadata.json (verified equivalent)",
+  "model_architecture": "ResearchXCONet (1D Conv + GRU + Parametric Attention + Bounded Tanh Head)",
+  "parameter_count": 9634,
+  "random_seed": 42,
+  "test_dataset_path": "data/processed/test.csv",
+  "test_date_range": [
+    "2026-03-10",
+    "2026-04-02"
+  ],
+  "evaluated_observations": 24,
+  "test_metrics": {
+    "mae": 806.39,
+    "rmse": 1021.79,
+    "mape_pct": 11.23,
+    "r2": 0.1486
+  },
+  "baseline_comparison": {
+    "gru_14d_residual": {
+      "mae": 766.61,
+      "rmse": 959.4,
+      "mape": 11.01,
+      "r2": 0.2494,
+      "delta_rmse": 62.39,
+      "pct_rmse_change": 6.5,
+      "delta_mae": 39.78,
+      "pct_mae_change": 5.19,
+      "delta_r2": -0.1008
+    },
+    "existing_xconet": {
+      "mae": 799.44,
+      "rmse": 1016.92,
+      "mape": 11.23,
+      "r2": 0.1567,
+      "delta_rmse": 4.87,
+      "pct_rmse_change": 0.48
+    },
+    "tuned_ema_0.60": {
+      "mae": 769.02,
+      "rmse": 957.78,
+      "mape": 10.74,
+      "r2": 0.2519,
+      "delta_rmse": 64.01
+    },
+    "persistence": {
+      "mae": 798.83,
+      "rmse": 1000.9,
+      "mape": 11.15,
+      "r2": 0.183
+    }
+  },
+  "determinations": {
+    "beats_gru_mae": false,
+    "beats_gru_rmse": false,
+    "beats_gru_mape": false,
+    "beats_gru_r2": false,
+    "beats_tuned_ema_rmse": false,
+    "improves_over_original_xconet": false,
+    "validation_improvement_generalized": false
+  },
+  "test_size_caveat": "Sample size is N=24 days. Differences < 45 Nm3/day are within standard error margins and should be interpreted cautiously.",
+  "final_status": "RESEARCH MODEL \u2014 GRU-14D REMAINS PRODUCTION DEFAULT"
+}

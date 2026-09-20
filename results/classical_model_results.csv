@@ -1,0 +1,9 @@
+model,category,hyperparameters,val_mae,val_rmse,val_r2,test_mae,test_rmse,test_mape_pct,test_r2
+Persistence (Lag-0),Naive Benchmark,None (y_hat = y_t),1065.36,1336.81,0.4569,798.83,1000.9,11.15,0.183
+Seasonal Persistence (Lag-7),Cyclical Heuristic,lag=7,2378.41,2987.68,-1.7127,1289.83,1625.49,18.44,-1.1547
+Moving Average (3-day SMA),Statistical Filter,window=3,1001.0,1401.11,0.4034,805.49,1010.09,11.39,0.1679
+Moving Average (7-day SMA),Statistical Filter,window=7,1288.35,1703.18,0.1184,812.01,1076.1,11.85,0.0556
+Exponential Moving Average (EMA),Statistical Filter,alpha=0.6,967.71,1298.17,0.4878,769.02,957.78,10.74,0.2519
+Ridge Regression (Tuned),Linear L2 Regularized,"alpha=0.01, features=compact(12)",1342.91,1660.45,0.1621,947.08,1139.13,12.14,-0.0582
+Random Forest Regressor (Tuned),Ensemble Bagging,"max_depth=2, n_est=50, min_split=10",2019.54,2294.96,-0.6006,1103.5,1418.6,13.79,-0.6412
+Gradient Boosted Trees (Tuned),Gradient Boosting,"max_depth=2, lr=0.03, n_est=150",1912.48,2209.07,-0.483,1323.27,1648.1,16.86,-1.2151
